@@ -1,5 +1,8 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -21,7 +24,9 @@ public class PostRequest {
         RestAssured.baseURI="https://reqres.in";
         RestAssured.basePath="api/users";
     }
-    @Test
+    @Test(description = "Verify post Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("post Request")
     public void postTest(){
        Response response= given()
                .contentType("application/json")

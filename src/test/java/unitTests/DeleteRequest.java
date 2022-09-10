@@ -1,11 +1,16 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
 public class DeleteRequest {
-    @Test
+    @Test(description = "Verify delete Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Delete Request")
     public void deleteTest(){
         given()
                 .contentType("application/json")

@@ -1,5 +1,8 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -22,7 +25,9 @@ public class PutRequest {
         RestAssured.basePath="api/users/2";
     }
 
-    @Test
+    @Test(description = "Verify put Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("put Request")
     public void putTest(){
         Response response = given()
                 .contentType("application/json")

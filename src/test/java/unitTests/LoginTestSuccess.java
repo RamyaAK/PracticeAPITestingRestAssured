@@ -1,5 +1,8 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -23,7 +26,9 @@ public class LoginTestSuccess {
         RestAssured.basePath="/api/login";
     }
 
-    @Test
+    @Test(description = "Verify successful Login test Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("successful Login function Request")
     public void successfulLoginTest(){
        Response response = given()
                 .contentType("application/json")

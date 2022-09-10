@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/ramyasachin/javaPrograms/PracticeAPITesting">
+        <classes>
+            <class name="unitTests.DeleteRequest">
+                <methods>
+                    <include name="deleteTest"/>
+                </methods>
+            </class>
+            <class name="unitTests.GetRequest">
+                <methods>
+                    <include name="getTest"/>
+                </methods>
+            </class>
+            <class name="unitTests.LoginTestSuccess">
+                <methods>
+                    <include name="successfulLoginTest"/>
+                </methods>
+            </class>
+            <class name="unitTests.PatchRequest">
+                <methods>
+                    <include name="PatchTest"/>
+                </methods>
+            </class>
+            <class name="unitTests.PostRequest">
+                <methods>
+                    <include name="postTest"/>
+                </methods>
+            </class>
+            <class name="unitTests.PutRequest">
+                <methods>
+                    <include name="putTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

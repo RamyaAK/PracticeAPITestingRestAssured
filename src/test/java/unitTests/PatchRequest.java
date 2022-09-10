@@ -1,5 +1,8 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +24,9 @@ public class PatchRequest {
         RestAssured.basePath="/api/users/2";
     }
 
-    @Test
+    @Test(description = "Verify patch Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("patch Request")
     public void PatchTest(){
         Response response = given()
                 .contentType("application/json")

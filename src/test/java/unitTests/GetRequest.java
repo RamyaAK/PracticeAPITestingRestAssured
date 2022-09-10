@@ -1,12 +1,17 @@
 package unitTests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class GetRequest {
-    @Test
+    @Test(description = "Verify Get Request")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Get Request")
     public void getTest(){
         given()
                 .get("https://reqres.in/api/users?page=2") //Get mtd call with response returned.
